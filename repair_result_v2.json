@@ -1,0 +1,18 @@
+{
+  "patch_version": "v2",
+  "application_version": "0.2.2-rc.1",
+  "target": "<app-dir>\\resources\\app.asar",
+  "original_archive_bytes": 213202918,
+  "patched_archive_bytes": 214041775,
+  "original_archive_sha256": "5fa8a6b21bceb8f3e99e30efa2270efd0cc773a11e42aa0488f804a64b34e637",
+  "patched_archive_sha256": "149ea630bcf984ba11d7c02a959024476243d1608e8b084144627f738cf72591",
+  "original_main_sha256": "f42ed25b0b844a63e515a3aff93dee89b781dae7fcbbbbfc93e04d95ad399ec1",
+  "patched_main_sha256": "38df11f186abfb9aa5679dd10a24f56e8571e111d5e1d646f954a1ea0a43a2dd",
+  "archive_entries_checked": 22102,
+  "changed_entries": [
+    "lib/main.js"
+  ],
+  "backup": "<backup-dir>\\web-auth_20261107_v2\\app.asar",
+  "installed": true,
+  "replacement_method": "verified-in-place-copy"
+}

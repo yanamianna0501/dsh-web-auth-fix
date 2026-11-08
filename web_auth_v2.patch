@@ -1,0 +1,19 @@
+--- lib/main.js.before
++++ lib/main.js.web-auth_v2
+@@ -20384,7 +20384,15 @@
+ 				hostUrl = ready.url;
+ 				if (ready.injections === void 0) throw new Error("Desktop Host did not provide boot injections");
+ 				injections = ready.injections;
+-				welcomeBackend = await connectDesktopWelcome(ready.url, (input, init) => net.fetch(input, init), async () => (await session.defaultSession.cookies.get({ url: ready.url })).map((cookie) => `${cookie.name}=${cookie.value}`).join("; "));
++				// Local hotfix v2: keep native welcome RPC on the shell-owned Host session.
++				const welcomeCookie = hostCookie;
++				const welcomeOrigin = new URL(ready.url).origin;
++				welcomeBackend = await connectDesktopWelcome(`${welcomeOrigin}/`, (input, init) => {
++					if (new URL(input).origin !== welcomeOrigin) throw new Error("desktop welcome: cross-origin Host request blocked");
++					const headers = new Headers(init?.headers);
++					headers.set("cookie", welcomeCookie);
++					return fetch(input, { ...init, headers, redirect: "error" });
++				}, async () => welcomeCookie);
+ 				analyticsEnabled = await welcomeBackend.analyticsEnabled().catch(() => false);
+ 				if (!reportedLaunch) {
+ 					reportedLaunch = true;

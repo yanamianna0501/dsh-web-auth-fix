@@ -1,0 +1,16 @@
+{
+  "runtime": "v24.15.0",
+  "passed": 6,
+  "failed": 0,
+  "checks": [
+    "Independent cookie-less transport reproduces the original 401 failure (mock Host, not Chromium)",
+    "Actual bundled welcome backend: authenticated root, settings/account state, analytics and RPC body preserved",
+    "Account WebSocket callback receives the same Host cookie and origin",
+    "Startup uses a clean root URL without a launch token and receives HTTP 200",
+    "Cross-origin targets and redirects receive zero requests / zero cookies",
+    "AbortSignal and timeout behavior are preserved"
+  ],
+  "limitations": [
+    "Mock HTTP Host for regression tests; no real account login/logout or settings mutation performed"
+  ]
+}

@@ -1,0 +1,6 @@
+*.zip
+__pycache__/
+*.pyc
+
+# 运行 repair_web_auth_v2.py 时生成的中间产物（含补丁后的 app.asar 副本，体积很大）
+work/

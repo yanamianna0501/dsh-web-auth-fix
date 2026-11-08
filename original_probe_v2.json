@@ -1,0 +1,18 @@
+{
+  "kind": "unmodified-desktop-auth-probe",
+  "breakpoint_line": 16856,
+  "authentication_response": {
+    "status": 431,
+    "ok": false,
+    "redirected": false
+  },
+  "paused_line": 16856,
+  "captured_before_fatal_throw": true,
+  "cookie_metadata": {
+    "cookieCount": 71,
+    "cookieHeaderBytes": 16186,
+    "dshCookieCount": 71,
+    "maxCookieBytes": 226
+  },
+  "captured_process_output_bytes": 905
+}

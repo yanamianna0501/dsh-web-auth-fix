@@ -1,0 +1,23 @@
+{
+  "passed": 4,
+  "failed": 0,
+  "scope": "Isolated synthetic fixtures only; live DSH never stopped or restored",
+  "checks": [
+    {
+      "case": "atomic-replace",
+      "passed": true
+    },
+    {
+      "case": "verified-in-place-copy",
+      "passed": true
+    },
+    {
+      "case": "interrupted-restore-retry",
+      "passed": true
+    },
+    {
+      "case": "unrecognized-version-rejected",
+      "passed": true
+    }
+  ]
+}

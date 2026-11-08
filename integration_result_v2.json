@@ -1,0 +1,39 @@
+{
+  "kind": "patched-real-electron-host-integration",
+  "passed": true,
+  "desktop_pid": 7372,
+  "host": {
+    "electron": "44.7.0",
+    "node": "24.21.0",
+    "authenticatedStatus": 200,
+    "anonymousStatus": 401,
+    "forgedCookieStatus": 401,
+    "nativeCookieHeaderBytes": 226,
+    "httpMaxHeaderSize": 16384,
+    "settingsRead": true,
+    "localeReadable": true,
+    "accountStatusRead": true,
+    "hasApiKey": true,
+    "analyticsRpcReadable": true,
+    "accountSubscription": {
+      "received": true,
+      "status": "credential-stored"
+    }
+  },
+  "windows": [
+    {
+      "id": 1,
+      "visible": true,
+      "loading": false,
+      "scheme": "dsh-app:",
+      "path": "/",
+      "document": {
+        "readyState": "complete",
+        "bodyChars": 24,
+        "hasAuthFailure": false
+      }
+    }
+  ],
+  "left_running": true,
+  "inspector_closed": true
+}
